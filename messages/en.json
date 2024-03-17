@@ -1,0 +1,12 @@
+{
+	"Home": {
+		"title-pre": "Multi language website by",
+		"button-1": "Start now",
+		"button-2": "Learn more",
+		"menu": {
+			"home": "Home",
+			"pricing": "Pricing",
+			"about": "About"
+		}
+	}
+}
