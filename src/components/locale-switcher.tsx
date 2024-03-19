@@ -1,14 +1,21 @@
-import Link from "next/link";
+import { usePathname, useRouter } from "../../navigation";
 
 export const LocaleSwitcher = () => {
+	const router = useRouter();
+	const pathname = usePathname();
+
+	const handleChange = (locale: string) => {
+		router.push(pathname, { locale });
+	};
+
 	return (
 		<div className="flex">
-			<Link className="text-gray-500" locale="en" href="/">
-				EN
-			</Link>
-			<Link className="text-gray-500" locale="pl" href="/">
+			<button className="text-black" onClick={() => handleChange("pl")}>
 				PL
-			</Link>
+			</button>
+			<button className="text-black" onClick={() => handleChange("en")}>
+				EN
+			</button>
 		</div>
 	);
 };
